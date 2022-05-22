@@ -23,6 +23,7 @@ class DetailActivity : AppCompatActivity() {
         }
 
         val html = "<html><body>${intent.extras?.getString(CONTENT)}</body></html>"
+        binding.webView.settings.javaScriptEnabled = true
         binding.webView.loadDataWithBaseURL("",html, "text/html", "utf-8", null)
     }
 
